@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style>
+    .wrap{display:flex; height:100vh; align-items:center; justify-content:center;}
+    .container{display:flex; flex-direction:column; width:800px; border:1px solid gray;}
+    header{padding-left:20px; border-bottom:1px solid gray;}
+    footer{padding:20px; border-top:1px solid gray;}
+    .content{display:flex; flex-direction:row;}
+    .content nav{border-right:1px solid gray; /*order:1;*/}
+    .content main{padding:10px; /*order:0;*/ order:-1;}
+    .content aside{border-left:1px solid gray; /*order:2;*/}
+    .content nav, .content aside{flex-basis:150px; flex-shrink:0;}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container">
+      <header>
+        <h1>Flex 레이아웃 연습</h1>
+      </header>
+      <section class="content">
+        <nav>
+          <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+          </ul>
+        </nav>
+        <main>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </main>
+        <aside class="">
+          AD
+        </aside>
+      </section>
+      <footer>
+        <a href="https://www.opentutorials.org/course/2418/13526" target="_blank"> 생활코딩 flex 속성 확인 바로가기</a>
+      </footer>
+    </div>
+  </div>
+    <div class="memo">
+      <h3>Properties for the flex container</h3>
+      <dl>
+        <dt>flex-direction</dt>
+        <dd>row; row-reverse; column; column-reverse;</dd>
+      </dl>
+      <dl>
+        <dt>flex-wrap</dt>
+        <dd>nowrap; wrap; wrap-reverse;</dd>
+      </dl>
+      <dl>
+        <dt>align-items</dt>
+        <dd>flex-start;(위쪽을 기준으로 정렬 = vertical-align:top) <br />flex-end;(아래쪽을 기준으로 정렬 = vertical-align:bottom) <br />center;(wrap 박스의 수평 중앙를 기준으로 = vertical-align:middle) <br />baseline;(아이템 중에서 상하 길이가 긴것의 기준으로 수평정렬 = vertical-align:baseline) <br />stretch;(아이템들의 상하 길이를 wrap 박스의 높이에 맞게 통일)</dd>
+      </dl>
+      <dl>
+        <dt>justify-content</dt>
+        <dd>
+          flex-start; (style = float:left;)<br />
+          flex-end; (style = float:left; display:inline-block;  + 부모태그에 text-align:right;)<br />
+          space-between; (style = float:left; margin-right:10px; + 마지막 아이템 태그에 margin-right:0px)<br />
+          center; (style = float:left; display:inline-block;  + 부모태그에 text-alinn:center;)<br />
+          space-around; (style = float:left; margin:0 10px;)
+        </dd>
+      </dl>
+      <dl>
+        <dt>align-content (justify-content 스타일의 세로버전(행간의 간격 조절))</dt>
+        <dd>
+          flex-start; <br />
+          flex-end; <br />
+          space-between;<br />
+          center;<br />
+          space-around;
+        </dd>
+      </dl>
+      <hr />
+      <h3>Properties for the flex items</h3>
+      <dl>
+        <dt>align-self</dt>
+        <dd>auto; flex-start; flex-end; center; baseline; stretch;</dd>
+      </dl>
+      <dl>
+        <dt>flex-grow</dt>
+        <dd>각 아이템들의 너비 비율 지정</dd>
+      </dl>
+      <dl>
+        <dt>flex-shrink</dt>
+        <dd>각 아이템들의 너비 비율 지정</dd>
+      </dl>
+      <dl>
+        <dt>flex</dt>
+        <dd>.item { flex: flex-grow [flex-shrink] [flex-basis]; }</dd>
+      </dl>
+      <dl>
+        <dt>order</dt>
+        <dd>아이템 순서 지정 가능</dd>
+      </dl>
+    </div>
+
+</body>
+</html>

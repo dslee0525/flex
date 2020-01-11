@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style>
+    .container{background-color:powderblue; display:flex; height:250px; flex-direction:row;}
+  .item{background-color:tomato; color:white; border:1px solid white; /*flex-grow:1*/}
+    .item:nth-child(1){
+      flex-basis:300px;
+    }
+    .item:nth-child(2){
+      flex-basis:300px;
+      /* flex-grow:2; */
+      flex-shrink:0;
+    }
+    .item:nth-child(3){
+      flex-basis:150px;
+      flex-shrink:1;
+    }
+    .item:nth-child(4){
+      flex-basis:150px;
+      flex-shrink:2;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+    <div class="memo">
+      <strong>flex-basis:스타일 </strong>
+      <p>flex의 방향에 맞는 길이 지정(여백의 길이를 나눠갖는 것)</p>
+      <hr />
+      <strong> flex-grow:스타일 || 기본값( flex-grow:0 )</strong>
+      <p>flex의 여백을 나눠갖는 것</p>
+      <hr />
+      <strong> flex-shrink:스타일</strong>
+      <p>flex-basis의 길이가 브라우저의 너비에 따라 영향을 받는데(basis의 값을 300px줘도 브라우저의 너비가 좁으면 basis의 값이 줄어든다.),
+        flex-shrink를 주면 영향을 받지않는다.</p>
+    </div>
+
+</body>
+</html>

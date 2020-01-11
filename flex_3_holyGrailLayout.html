@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style>
+    .container{display:flex; flex-direction:column;}
+    header{padding-left:20px; border-bottom:1px solid gray;}
+    footer{padding:20px; border-top:1px solid gray; border-bottom:1px solid gray;}
+    .content{display:flex; flex-direction:row;}
+    .content nav{border-right:1px solid gray;}
+    .content main{padding:10px;}
+    .content aside{border-left:1px solid gray;}
+    .content nav, .content aside{flex-basis:150px; flex-shrink:0;}
+</style>
+</head>
+<body>
+    <div class="container">
+      <header>
+        <h1>Flex 레이아웃 연습</h1>
+      </header>
+      <section class="content">
+        <nav>
+          <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+          </ul>
+        </nav>
+        <main>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </main>
+        <aside class="">
+          AD
+        </aside>
+      </section>
+      <footer>
+        <a href="https://www.opentutorials.org/" target="_blank"> 생활코딩 홈페이지 바로가기</a>
+      </footer>
+
+    </div>
+    <div class="memo">
+      <strong>flex-basis:스타일 </strong>
+      <p>flex의 방향에 맞는 길이 지정(여백의 길이를 나눠갖는 것)</p>
+      <hr />
+      <strong> flex-grow:스타일 || 기본값( flex-grow:0 )</strong>
+      <p>flex의 여백을 나눠갖는 것</p>
+      <hr />
+      <strong> flex-shrink:스타일</strong>
+      <p>flex-basis의 길이가 브라우저의 너비에 따라 영향을 받는데(basis의 값을 300px줘도 브라우저의 너비가 좁으면 basis의 값이 줄어든다.),
+        flex-shrink를 주면 영향을 받지않는다.</p>
+    </div>
+
+</body>
+</html>

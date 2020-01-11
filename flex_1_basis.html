@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style>
+    .container{background-color:powderblue; display:flex; height:250px; flex-direction:column-reverse;}
+    .item{background-color:tomato; color:white; border:1px solid white;}
+</style>
+</head>
+<body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+    <div class="memo">
+      <strong>.container에 display:flex 스타일 추가 필수.</strong>
+      <h3>행의 방향</h3>
+      <p>flex-direction:row; (기본값)</p>
+      <p>flex-direction:row-reverse; (기본값)</p>
+      <strong>*flex-direction:column을 줄때 .container에 height값을 줄때 차이를 볼수 있다.</strong>
+      <p>flex-direction:column; (기본값)</p>
+      <p>flex-direction:column-reverse; (기본값)</p>
+    </div>
+
+</body>
+</html>
